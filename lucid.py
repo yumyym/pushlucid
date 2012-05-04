@@ -1,5 +1,6 @@
 from __future__ import with_statement
 import time
+import os
 from sqlite3 import dbapi2 as sqlite3
 from hashlib import md5
 from datetime import datetime
@@ -9,7 +10,7 @@ from flask import Flask, request, session, url_for, redirect, \
 from werkzeug import check_password_hash, generate_password_hash
 
 # configuration
-DATABASE = '/tmp/lucid.db'
+DATABASE = 'lucid.db'
 PER_PAGE = 30
 DEBUG = True
 SECRET_KEY = 'development key'

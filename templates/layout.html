@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lucid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel=stylesheet href="{{url_for('static', filename = 'bootstrap.css')}}">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename = 'bootstrap-responsive.css')}}">
+    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Lucid</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/guide">Guide</a></li>
+              <li><a href="/showall">View all</a></li>
+              <li><a href="/submit">Submit</a></li>
+              <li><a href="/upcoming">Upcoming</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+     {% block body %}{% endblock %}
+
+      <hr>
+
+      <footer>
+      <p>CS 42 2012</p>
+      </footer>
+
+  </div> <!-- /container -->
+
+  </body>
+

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+<div class="page-header">
+    <h1> Privacy Policies! <small> That's it, folks... </small> </h1>
+</div>
+    <table class = "table table-bordered table-striped">
+        <tbody>
+    {% for entry in entries %}
+        <tr>
+        <td> <a href="{{"show/"~entry.title}}"> {{ entry.title }} </a> </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+{% endblock %}

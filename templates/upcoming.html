@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="hero-unit">
+    <h1>Upcoming...</h1>
+    <p>Where we'd like to go with Lucid</p>
+</div>
+<div class="row">
+    <div class="span3">
+        <h3>Login/Admin</h3>
+        <p>One of the first things we'd like to do is implement a log-in or admin feature so that 
+        some form of authorization is required for editing or submitting.</p>
+        <h4>Difficulty: Easy (login), Hard (admin)</h4>
+    </div>
+    <div class="span3">
+        <h3>Robust functionality</h3>
+        <p>We'd like to make the site more robust against bad entries, for example, blank entries 
+        in fields.</p>
+        <h4>Difficulty: Easy</h4>
+    </div>
+    <div class="span3">
+        <h3>Plug-in</h3>
+        <p>We want to create a browser plug-in for Lucid that detects the url of the user's current
+        page. If an entry for the url exists in Lucid, the plugin should link to that entry. Otherwise,
+        the plugin should link to the Lucid homepage. </p>
+        <h4>Difficulty: Moderate</h4>
+    </div>
+    <div class="span3">
+        <h3>Categorization</h3>
+        <p>We'd like to be able to tag companies according to their function (for example, "search
+        engine" or "social network") so that users can filter the list of catalogued privacy
+        policies according to function of service. </p>
+        <h4>Difficulty: Moderate</h4>
+    </div>
+    <div class="span3">
+        <h3>Modularity, abstraction</h3>
+        <p>Lucid is currently built on top of Flask, a Python microframework, with SQLite. 
+        Our goal is to switch to a more high-level application framework that will be more flexible
+        with respect to database management and structural changes.</p>
+        <h4>Difficulty: Moderate</h4>
+    </div>
+    <div class="span3">
+        <h3>Resources</h3>
+        <p>We'd love to make Lucid an educational resource for privacy in general. We could build a privacy-related
+        blog coupled with a resources/introduction page. </p>
+        <h4>Difficulty: Moderate</h4>
+    </div>
+    <div class="span3">
+        <h3>Third parties</h3>
+        <p>We'd like to create profiles for third parties that collect information from consumers.
+        A privacy page for a company would ideally link to all of its third parties, and a profile
+        for a third party would link back to all the companies associated with that third party.
+        Although some companies disclose all third parties, others do not; this could potentially be
+        dealt with by mining data from applications like Collusion. </p>
+        <h4>Difficulty: Hard</h4>
+    </div>
+</div>
+{% endblock %}

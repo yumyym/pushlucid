@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+    <div class="hero-unit">
+        <h2>Submit or edit a privacy summary.</h2>
+        <p>Learn how to understand and contribute to Lucid <a href="/guide">here</a>. If you're ready to begin, enter the url of a web company below.</p>
+        <p>     
+        <form action="{{ url_for ('submit_form') }}" method=post class="form-inline">
+            <input type="text" class="span4" placeholder="catsarekewl.com" name="title">
+            <button type="submit" class="btn btn-primary"> Go!</button>
+        </form>
+        </p>
+        <p><small><em>Note: discard the http://www. portion of the address</em></small></p>
+    </div>
+</body>        
+{% endblock %}

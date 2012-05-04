@@ -1,0 +1,230 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+<div class="hero-unit">
+    <h1>Get started with Lucid.</h1>
+    <p>  <a href="#key">Overview</a> // <a href="#understand">Understand</a> // <a href="#create">Contribute</a> </p>
+</div>
+
+<section id="key">
+<div class="page-header">
+    <h2>Key Features<p><small>Lucid presents privacy policies in easy-to-read, visual formats.</small></p></h2>
+</div>
+
+<div class="row">
+    <div class="span4">
+        <ul class="thumbnails">
+            <li class="span4">
+            <a href="http://i.imgur.com/NzwN5.png" class="thumbnail">
+                <img src="http://i.imgur.com/NzwN5.png">
+            </a>
+            </li>
+            <li class="span4">
+            <a href="http://i.imgur.com/R7y6p.png" class="thumbnail">
+                <img src="http://i.imgur.com/R7y6p.png">
+            </a>
+            </li>
+        </ul>
+    </div>
+    <div class="span8">
+        <div class="well">
+            <h3>Elements of a privacy summary</h3>
+            <dl>
+                <dt>Compliance statement</dt>
+                <dd>Company's stance on legal compliance, as directly stated in the text of its privacy policy.</dd>
+                <dt>Data usage chart</dt>
+                <dd>Visual representation of data collection and use. Rows correspond to the eight <a href="#types">types</a> of collected data, 
+                and columns correspond to the six ways (besides legal compliance) in which the data may be <a href="#uses">used or shared</a>. 
+                <ul>
+                    <li> <span class="badge badge-important">Yes</span> means that your data IS used in this way.
+                    <li> <span class="badge badge-warning">Opt-out</span> means that your data is used in this way, but you may opt-out.
+                    <li> <span class="badge badge-success">Opt-in</span> means that your data will only be used in this way if you opt-in.
+                    <li> <span class="badge">No</span> means that your data will neither be collected nor used in this way.
+                </ul>
+                </dd>
+                <dt>CSV file</dt>
+                <dd>A csv version of the information in the data usage chart is available for download.</dd>
+                <dt>Child and parent policies</dt>
+                <dd>Companies often have "parent" privacy policies that cover all their services, as well as "child" policies for more specific services
+                that clarify or overrule their "parent" policies. 
+                The privacy summary links to children and parent policies when they exist.
+                </dd>
+                <dt>Full text</dt>
+                <dd>A link to the privacy policy itself.</dd>
+            </div>
+    </div>
+</div>
+
+<section id="understand">
+<div class="page-header">
+    <h2>Understanding Lucid <p><small> Lucid summarizes the type of data a service collects, why that 
+            data is collected, and who that data may be shared with.</small></p></h2>
+</div>
+
+<div class="row">
+    <div class="span4">
+        <h3> What data? </h3>
+        <p>Data collected is generally one of the following:</p>
+        <ul>
+            <li> Personally identifiable (PI)
+            <li> <em>Sensitive</em> personally identifiable
+            <li> Aggregate, anonymized, or non-PI
+            <li> Geographical
+            <li> Device-specific
+            <li> Application-specific
+            <li> Log/usage
+            <li> Trackers
+        </ul>
+    </div>
+    <div class="span4">
+        <h3> Why? </h3>
+        <p>Companies may use the data they collect to:</p>
+        <ul>
+            <li> Provide the requested service.
+            <li> Improve and develop other services.
+            <li> Filter content or tailor services according to user profiles.
+            <li> Target ads towards users.
+        </ul>
+    </div>
+    <div class="span4">
+        <h3> Who? </h3>
+        <p> Ownership of data may also be transferred or conferred as companies: </p>
+        <ul>
+            <li> Share with third parties or with the public.
+            <li> Go through mergers or acquisitions.
+            <li> Comply with or enforce legal process, terms of service
+        </ul>
+    </div>
+</div>
+<section id="types">
+<div class="row">
+    <div class="span6">
+    <div class="well">
+        <center><h3> Types of data </h3></center>
+        <dl>
+            <dt>Personally identifiable </dt>
+            <dd>Can be used to uniquely identify or locate a person. 
+            <p><em><small>includes full name, birthday + zipcode, location, education, workplace</small></em></p></dd>
+            <dt>Sensitive personally identifiable </dt>
+            <dd>Personally identifiable information that is sensitive in nature. 
+            A company may not treat sensitive and non-sensitive personal information in the same way, and
+            we've created a separate category for "sensitive" PII in our privacy summaries in order to reflect that. 
+            Lucid's goal is to apply a reasonably strict standard towards judging what is "sensitive" and what is not, 
+            but it's extremely important to remember that the definition of "sensitive" varies from person to person, corporation to corporation.
+            <p><em><small>includes religious affiliation, sexual orientation, financial information, medical history</small></em></p>
+            <dt>Aggregate, anonymized, non-PI </dt>
+            <dd>Data that is impersonal, that has been stripped of identifying features, or that has been aggregated.
+            Note that even de-identified information can be <a href="http://www.cs.utexas.edu/~shmat/shmat_cacm10.pdf">re-identified</a> in very dangerous ways.
+            In the context of our privacy summaries, Lucid <em>does not</em> make any normative claims about de-identified information. 
+            Our goal, for now, is simply to inform users of policies as stated by corporations.
+            <p><em><small>includes individual records stripped of names, aggregated records (statistics)</small></em></p>
+            </dd>
+            <dt>Geographical</dt>
+            <dd>Location tracking: where you've been and when you've been there.
+            <p><em><small>includes involuntary mobile phone tracking, self-reported (such as Foursquare)</small></em></p>
+            </dd>
+            <dt>Device-specific</dt>
+            <dd>Data about the device you use to access a service; may or may not be uniquely identifying.
+            <p><em><small>includes operating system, network information, unique device identifiers</em></small></p>
+            </dd>
+            <dt>Application-specific</dt>
+            <dd>Data about your version of a service or application.
+            <p><em><small>includes installation details, unique identifier for a downloaded application</small></em></p>
+            </dd>
+            <dt>Log/usage</dt>
+            <dd>Describes how you use a service: for example, which features you access and when you access them, or
+            how the service performs 
+            <p><em><small>includes IP address, log details of a phone call or video chat, browsing history on a website </small></em></p>
+            </dd>
+            <dt>Trackers</dt>
+            <dd>Record internet browsing activity.
+            <p><em><small>includes cookies, web beacons</small></em></p>
+            </dd>
+        </dl>
+        </div>
+    </div>
+    <section id="uses">
+    <div class="span6">
+        <div class="well">
+            <center><h3>Types of use</h3></center>
+            <dl>
+                <dt>Provide service</dt>
+                <dd> Companies use your data in order to provide the expected service. To complete a transaction, your information may be passed to a third party along the way.
+                <p><em><small>ex: an online retail store provides your address to a shipping company when you buy a product</small></em></p>
+                </dd>
+                <dt>Improve service</dt>
+                <dd> A company may use your data to maintain, develop, or improve its other products.
+                <p><em><small>ex: a news site creates a new section based on reader inclinations</small></em></p>
+                </dd>
+                <dt>Filter and tailor</dt>
+                <dd> Services may be adjusted according to your profile. 
+                See Eli Pariser on the <a href="http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html">"filter bubble."</a>
+                <p><em><small>ex: search results may be filtered according to your documented interests, headlines may be suggested to you based on your reading history</small></em></p>
+                </dd>
+                <dt>Target ads</dt>
+                <dd> The company to whom you've provided/given up data may serve you ads based on that data.
+                <p><em><small>ex: a site serves you cat food ads because you always visit the site's cat section</small></em></p>
+                </dd>
+            </dl>
+        </div>
+        <div class="well">
+            <center><h3>Ownership</h3></center>
+            <dl>
+                <dt>Third parties</dt>
+                <dd> Data may be sold, shared, or bartered to a third party. Alternatively, the user or the company may allow data to be collected directly by a third party.
+                <p><em><small>ex: a website sells your contact information to telemarketers, a third-party application gathers data about you</small></em></p>
+                </dd>
+                <dt>Mergers and acquisitions</dt>
+                <dd>Ownership may be transferred to a different entity when mergers or acquisitions occur.
+                <p><em><small>ex: companies A and B merge, combining their users' data</small></em></p>
+                </dd>
+                <dt>Legal compliance</dt>
+                <dd>Information may be shared in compliance with the law, to further private investigation, to enforce terms of service, etc.
+                <p><em><small>ex: law enforcement requests and receives data from an email service</small></em></p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+<section id="create">
+<div class="page-header">
+    <h2>Contribute to Lucid <p><small>Learn to submit and edit privacy policy summaries.</small></p></h2>
+</div>
+<div class="row">
+    <div class="span12">
+      <ul class="thumbnails">
+        <li class="span4">
+            <a href="http://i.imgur.com/WZdBw.png" class="thumbnail">
+                <img src="http://i.imgur.com/WZdBw.png" alt="">
+            </a>
+            <div class="caption">
+              <h5>Start by clicking "Submit" at the top of any page.</h5>
+              <p>At the submit page, enter the website of a company whose privacy page you wish to summarize.</p>
+            </div>
+        </li>
+         <li class="span4">
+            <a href="http://i.imgur.com/7mHma.png" class="thumbnail">
+                <img src="http://i.imgur.com/7mHma.png" alt="">
+            </a>
+            <div class="caption">
+             <h5>Enter information for a new website...</h5>
+              <p>If information for the website does not yet exist, you can create a new entry.</p>
+            </div>
+            </li>
+            <li class="span4">
+            <a href="http://i.imgur.com/mgDmK.png" class="thumbnail">
+                <img src="http://i.imgur.com/mgDmK.png" alt="">
+            </a>
+            <div class="caption">
+              <h5>...or edit an existing entry.</h5>
+              <p>If an entry for the website already exists, you can edit it.</p>
+            </div>
+        </li>
+
+    </ul>
+    </div>
+</div>
+</body>
+{% endblock %}

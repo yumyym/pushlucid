@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+    <form action="{{ url_for('writeold',company=entry.title) }}" method=post class="well">
+    <div class="page-header">
+        <h1> {{ entry.title }} <small> edit a privacy summary </small> </h1>
+    </div>
+    <div class="control group">
+        <label class="control-label" for="input01"> link to privacy policy (include http://www.) </label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" id="input01" value="{{ entry.link }}" name="link">
+        </div>
+        <label class="control-label" for="textarea">compliance policy</label>
+        <div class="controls">
+            <textarea class="input-xlarge" id="textarea" rows="4" name="compliance">{{entry.compliance}}</textarea>
+        </div>
+        <label class="control-label" for="input02">parent policy, if any</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" id="input02" name="parent" value="{{ entry.parent }}">
+        </div>
+    </div>
+    <table class = "table table-striped table-condensed">
+        <thead>
+        </thead>
+        <tbody>
+             {% for v in RV %}
+            <tr> <td colspan= {{ RH|length }}> <center> <h2> {{ V[v] }} </h2> </center> </td></tr>
+            <tr>
+                {% for h in RH %}
+                <td>
+                    <div class="control-group">
+                        <label class="control-label"> {{ H[h] }} </label>
+                        <div class="controls">
+                            {% set field = "q"~v~"_"~h %}
+                            {% for val in ["yes","opt-out","opt-in","no"] %}
+                            {% if val == entry[field] %}
+                            <label class = "radio">
+                                <input type="radio" name="{{field}}" value="{{val}}" checked> {{val}}
+                            </label>
+                            {% else %}
+                            <label class = "radio">
+                                <input type="radio" name="{{field}}" value="{{val}}"> {{val}}
+                            </label>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+    </div>
+</form>
+</body>
+                               
+
+{% endblock %}

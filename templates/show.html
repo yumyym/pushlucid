@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+    <div class="page-header">
+        <h1> <a href = "{{ entry.link }}"> {{ entry.title }} </a> <small> a privacy summary // <a href=
+                    "{{"/edit/"~entry.title}}"> edit </a> </small> </h1>
+    </div>
+    <div class="row">
+        <div class="span3">
+        {% if children %}
+                <h3> child policies </h3>
+                <ul>
+                {% for child in children %}
+                <li> <a href="{{"/show/"~child}}">{{ child }}</a>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="span3">
+            {% if parent %}
+            <h3> parent policy </h3>
+            <ul>
+                {% for name in parent %}
+                <li> <a href="{{"/show/"~name}}">{{ name }}</a>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="span6 offset6">
+            <blockquote class="pull-right">
+            <p>{{ entry.compliance }} </p>
+            <small>{{ entry.title }}</small>
+            </blockquote>
+        </div>
+    </div>
+    <div class="well">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                {% for h in RH %}
+                <th> <center>{{ H[h] }}</center> </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in RV %}
+            <tr>
+                <td> <b>{{ V[v] }}</b> </td>
+                {% for h in RH %}
+                <td> <center>
+                    {% set x = entry["q"~v~"_"~h] %}
+                    {% if x == "yes" %}
+                    <span class="badge badge-important">{{x}}</span>
+                    {% elif x=="opt-out" %}
+                    <span class="badge badge-warning">{{x}}</span>
+                    {% elif x=="opt-in" %}
+                    <span class="badge badge-success">{{x}}</span>
+                    {% else %}
+                    <span class="badge">{{x}}</span>
+                    {% endif %}
+                </center>
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <center><a class="btn btn-small btn-success" href="{{"/csv/"~entry.title}}">download csv</a></center>
+</body>     
+{% endblock %}
